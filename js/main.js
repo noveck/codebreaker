@@ -9,6 +9,56 @@ const success = document.getElementById('success');
 const warning = document.getElementById('warning');
 const gameOverWarning = document.getElementById('game-over');
 
+
+/*
+    Puzzleception
+*/
+var r_text = new Array ();
+r_text[0] = "Secret: [1] = 1"; 
+r_text[1] = "Secret: [2] = H"; 
+r_text[2] = "Secret: [3] = O"; 
+r_text[3] = "Secret: [4] = R"; 
+r_text[4] = "Secret: [5] = i"; 
+r_text[5] = "Secret: [6] = 2"; 
+r_text[6] = "Secret: [7] = D"; 
+r_text[7] = "Secret: [8] = U"; 
+r_text[8] = "Secret: [9] = 1"; 
+r_text[9] = "Secret: [10] = A"; 
+r_text[10] = "Secret: [11] = F"; 
+r_text[11] = "Secret: [12] = P"; 
+r_text[12] = "Secret: [13] = c"; 
+r_text[13] = "Secret: [14] = R"; 
+r_text[14] = "Secret: [15] = A"; 
+r_text[15] = "Secret: [16] = 0"; 
+r_text[16] = "Secret: [17] = 1"; 
+r_text[17] = "Secret: [18] = G"; 
+r_text[18] = "Secret: [19] = 3"; 
+r_text[19] = "Secret: [20] = a"; 
+r_text[20] = "Secret: [21] = z"; 
+r_text[21] = "Secret: [22] = J"; 
+r_text[22] = "Secret: [23] = 0"; 
+r_text[23] = "Secret: [24] = B"; 
+r_text[24] = "Secret: [25] = C"; 
+r_text[25] = "Secret: [26] = C"; 
+r_text[26] = "Secret: [27] = - (that's a dash symbol)"; 
+r_text[27] = "Secret: [28] = L"; 
+r_text[28] = "Secret: [29] = C"; 
+r_text[29] = "Secret: [30] = k"; 
+r_text[30] = "Secret: [31] = r"; 
+r_text[31] = "Secret: [32] = V"; 
+r_text[32] = "Secret: [33] = H"; 
+r_text[33] = "Secret: [34] = i"; 
+r_text[34] = "Secret: [35] = K"; 
+r_text[35] = "Secret: [36] = L"; 
+r_text[36] = "Secret: [37] = p"; 
+r_text[37] = "Secret: [38] = S"; 
+r_text[38] = "Secret: [39] = f"; 
+r_text[39] = "Secret: [40] = s"; 
+r_text[40] = "Secret: [41] = 9"; 
+r_text[41] = "Secret: [42] = V";
+r_text[42] = "Secret: [43] = h";
+r_text[43] = "Secret: [44] = a";
+
 /* 
     Generate random 4 digits 
     Returns Array of 4 elements
@@ -160,6 +210,9 @@ const winTheGame = () => {
     code.style.animationName = "none";
     hiddenCode.style.color = "#9EBF5C";
     hiddenCode.textContent = gameNumber.join('');
+    var x = Math.floor(r_text.length * Math.random());
+    let rmsg = r_text[x] ;
+    $ ('#rmsg').text(rmsg);
 }
 
 playAgainButton.addEventListener('click', () => {

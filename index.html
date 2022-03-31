@@ -5,7 +5,10 @@
     <meta content="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="A Codebreaking game">
+    <meta name="keywords" content="Game, Codebreaking, Puzzle, Numbers, Cipher">
+    <meta name="author" content="Noveck Gowandan">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,10 +16,12 @@
 </head>
 
 <body>
+        
     <div id="main-card" class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="text-center">CODE BREAKER</h1>
+                <h1 class="text-center"><div class="knowledge"></div></h1>
+                <p class="text-muted text-center"><a href="#lightbox-1" rel="lightbox">Help</a>  |  <a href="#lightbox-2" rel="lightbox">About</a>  |  <a href="#lightbox-3" rel="lightbox">Secret</a>  |  <a href="#lightbox-4" rel="lightbox">Cipher Masters</a></p>
             </div>
         </div>
         <div class="row">
@@ -27,8 +32,8 @@
         <div id="input-form" class="row">
             <div class="col-sm-8 mb-20">
                 <div class="input-group">
-                    <input type="number" name="number" id="your-guess" class="form-control" placeholder="Enter a number..."
-                        aria-label="Enter a number..." aria-describedby="basic-addon1">
+                    <input type="number" name="number" id="your-guess" class="form-control" placeholder="Enter a 4 digit code..."
+                        aria-label="Enter a 4 digit code..." aria-describedby="basic-addon1">
                 </div>
             </div>
             <div class="col-sm-4">
@@ -39,9 +44,13 @@
             <div class="col-sm-9">
                 <div id="success" class="alert alert-success fade hide" role="alert">
                     Congratulations you have broken the code!
+                    <br>
+                    <p class="small"><span id="rmsg"></span></p>
                 </div>
                 <div id="game-over" class="alert alert-danger fade hide" role="alert">
                     Game Over!
+                    <br>
+                    <p class="small">No secrets for you.</p>
                 </div>
             </div>
             <div class="col-sm-3">
@@ -63,12 +72,79 @@
                 </div>
             </div>
             <hr>
+            <div class="lightbox" id="lightbox-1">
+                <h3 class="text-center">Help</h3>
+                <hr>
+                <p class="text-muted text-center small">
+                Guess the randomly generated 4 digit code to win. The game stores your guess and gives you some hints.
+                <br>
+                A correct digit in the correct position will be shown as a green check: &#9989;
+                <br>
+                A correct digit in the wrong position will be shown as a yellow circle: &#8635;
+                <br>
+                An incorrect digit will be shown as a red X: &#10060;
+                <br>
+                Solve it before your 10th attempt and win. Probably.
+                <br>
+                Beware, not everything is at it seems. There are some shared secrets, hidden secrets, and maybe a wrong turn or two. There is a finish line, and it's not where you think.
+                <br>
+                Those who actually finish will be listed on the elusive hidden leaderboard and can claim the title of Cipher Master. 
+                <br>
+                Good luck.
+                </p>
+                <a class="lightbox__close" href="#">X</a>
+            </div>
+            <div class="lightbox" id="lightbox-2">
+                <h3 class="text-center">About</h3>
+                <hr>
+                       <p class="text-muted text-center">
+                    Game by <a href="https://linktr.ee/Noveck" target="_blank">Noveck J. Gowandan
+                </p>
+                <p class="text-muted text-center small">
+                    <a href="https://www.buymeacoffee.com/noveck" target="_blank"> &#9749; Buy me a Coffee?</a>
+                    <br>
+                    <a class="btn-link" target="_blank" href="mailto:ngowandan@gmail.com?Subject=Code Breaker Feedback"> Comments / Feedback? </a>
+                </p>
+                <p class="text-muted text-center small">
+                    Based on the original game by <a href="https://github.com/avenue9977" target="_blank">Nikola Chetelyazov.</a>
+                    <br>
+                    Additional credits to:
+                    <br>
+                    <a href="https://codepen.io/Garyrae" target="_blank">Gary Rae</a> 
+                    <br>
+                    <a href="https://codepen.io/HikwaMehluli" target="_blank">Mehluli Hikwa</a> 
+                </p>
+                <a class="lightbox__close" href="#">X</a>
+            </div>
+               <div class="lightbox" id="lightbox-3">
+                <h3 class="text-center">Secret</h3>
+                <hr>
+                <p class="text-muted text-center">
+                There are no secrets here<a href="fakesecret.html" class="text-muted">.</a>
+                </p>
+                <a class="lightbox__close" href="#">X</a>
+            </div>
+            <div class="lightbox" id="lightbox-4">
+                <h3 class="text-center">Cipher Masters</h3>
+                <hr>
+                <p class="text-muted text-center">
+                 &#127942; <img src="img/user-secret-solid.svg" class="text-center img-fluid mx-auto my-auto" style="width: 5%;" alt=""> &#127942;
+                 <br>
+                 If only it were that simple.
+                 <br>
+                 Only Cipher Masters can see other Cipher Masters. 
+                 <p class="text-muted text-center small">Or perhaps those with a special code.</p>
+
+                </p>
+                <a class="lightbox__close" href="#">X</a>
+            </div>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scramble.js"></script>
 </body>
 
 </html>
