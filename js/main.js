@@ -13,7 +13,7 @@ const gameOverWarning = document.getElementById('game-over');
 /*
     Puzzleception
 */
-var r_text = new Array [];
+var r_text = new Array ();
 r_text[0] = "Secret: [1] = 1";
 r_text[1] = "Secret: [2] = H";
 r_text[2] = "Secret: [3] = O";
@@ -211,7 +211,7 @@ const winTheGame = () => {
     hiddenCode.style.color = "#9EBF5C";
     hiddenCode.textContent = gameNumber.join('');
     var x = Math.floor(r_text.length * Math.random());
-    let rmsg = r_text[x] ;
+    let rmsg = r_text[x];
     $('#rmsg').text(rmsg);
 }
 
