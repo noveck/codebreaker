@@ -1,10 +1,10 @@
 # Code Breaker Game
 
-Simple Code Breaker game made with pure JavaScript.
+Simple Code Breaker game made with pure JavaScript - Forked from avenue9977, and added some fresh viuals and logic twists.
 
 ## Start the game
 
-Open the Github site.
+Open the Github site: https://noveck.github.io/codebreaker
 
 ## Instructions
 
