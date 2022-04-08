@@ -57,7 +57,7 @@ r_text[39] = "Secret: [40] = s";
 r_text[40] = "Secret: [41] = 9";
 r_text[41] = "Secret: [42] = V";
 r_text[42] = "Secret: [43] = h";
-r_text[43] = "Secret: [44] = a";
+r_text[43] = "Secret: [44] = A";
 
 /*
     Generate random 4 digits 
